@@ -7,4 +7,61 @@
   --background-light: #f8fafc;
   --text-dark: #f8fafc;
   --text-light: #1e293b;
+  --second-bg: #131313;
+}
+
+
+html {
+    --main-bg: #fff;
+    --second-bg: #e6edf9;
+    --card-bg: #f6f9ff;
+    --title-bg: #85f2b1;
+    --border: #d0daeb;
+    --tw: #FFFFFF;
+    --tc: #28344f;
+    --ts: #6f7789;
+    --mc: #28cb69;
+    --mc-hover: #0fac4e;
+    --mc-trans: rgb(40, 203, 105, .15);
+    --radius: 15px
+}
+
+html.dark {
+    --main-bg: #1a1a1d;
+    --second-bg: #131313;
+    --card-bg: #202024;
+    --title-bg: #2cca69;
+    --border: #2b2b2f;
+    --tw: #FFFFFF;
+    --tc: #FFFFFF;
+    --ts: #bcbcbc;
+    --mc: #28cb69;
+    --mc-hover: #0fac4e;
+    --mc-trans: rgb(40, 203, 105, .15);
+    --radius: 15px
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: -.015em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    min-width: 375px;
+    color: var(--tc);
+    background-color: var(--main-bg);
+    overflow-x: hidden
+}
+
+body.rtl.rtl-enable {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0
 }
