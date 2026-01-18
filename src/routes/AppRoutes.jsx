@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import AdminLayout from "../features/dashboard/admin/layouts/AdminLayout.jsx";
 import SignIn from "../features/auth/pages/SignIn";
 import TeacherLayout from "../features/dashboard/teacher/layouts/TeacherLayout.jsx";
+import AdminDashboard from "../features/dashboard/admin/pages/AdminDashboard";
 
 const AppRoutes = () => {
     return (
@@ -76,6 +77,8 @@ const AppRoutes = () => {
                 }
             >
                 <Route index element={<div className="p-4"><h2>Reports</h2><p>Coming soon...</p></div>} />
+                <Route index element={<AdminDashboard />} />
+                
             </Route>
         </Routes>
     );
