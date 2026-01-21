@@ -324,3 +324,77 @@ html.dark .btn--ghost:hover {
   font-weight: 600;
   color: var(--tc);
 }
+
+/* Modal System */
+.modalBackdrop{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 18px;
+  z-index: 999;
+}
+.modal{
+  width: min(840px, 100%);
+  background: var(--card-bg);
+  border:1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  overflow:hidden;
+  animation: modalIn .2s ease;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes modalIn{
+  from{ transform: scale(.95); opacity:0; }
+  to{ transform: scale(1); opacity:1; }
+}
+
+.modalHead{
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.modalTitle{
+  font-weight:1000;
+  font-size:14px;
+  color: var(--tc);
+}
+.modalBody{
+  padding: 14px;
+  color: var(--tc);
+  flex: 1;
+  overflow-y: auto;
+}
+.modalActions{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-top: 14px;
+}
+
+/* Confirm Specifics */
+.modal--confirm {
+  width: min(440px, 90%) !important;
+}
+.confirmDesc{
+  line-height:1.5;
+  color: var(--ts);
+  white-space: pre-wrap;
+}
+
+/* Close Button */
+.modalClose{
+  width: 28px; height: 28px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:8px;
+  border:none;
+  background:transparent;
+  color: var(--ts);
+  cursor:pointer;
+}
+.modalClose:hover{ background: rgba(0,0,0,.05); color: var(--tc); }

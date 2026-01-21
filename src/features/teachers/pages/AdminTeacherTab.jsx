@@ -37,6 +37,7 @@ import Metric from "../components/metrics/Metric";
 import SearchInput from "../../dashboard/admin/components/ui/SearchInput";
 import Select from "../../dashboard/admin/components/ui/Select";
 import Checkbox from "../../dashboard/admin/components/ui/Checkbox";
+import ConfirmModal from "../../dashboard/admin/components/ui/ConfirmModal";
 
 // Modals & Drawers
 import Modal from "../components/modals/Modal";
@@ -113,21 +114,14 @@ export default function AdminTeacherTab() {
       )}
 
       {/* Confirm */}
-      {confirm && (
-        <Modal onClose={() => setConfirm(null)} title={confirm.title} className="at-modal--confirm">
-          <div className="at-confirm">
-            <p className="at-confirm__desc">{confirm.desc}</p>
-            <div className="at-modal__actions">
-              <button className="at-btn at-btn--ghost" onClick={() => setConfirm(null)}>
-                Hủy
-              </button>
-              <button className="at-btn" onClick={confirm.onConfirm}>
-                {confirm.actionLabel}
-              </button>
-            </div>
-          </div>
-        </Modal>
-      )}
+      <ConfirmModal
+        isOpen={!!confirm}
+        onClose={() => setConfirm(null)}
+        onConfirm={confirm?.onConfirm}
+        title={confirm?.title}
+        description={confirm?.desc}
+        confirmLabel={confirm?.actionLabel}
+      />
 
       {/* Upsert Teacher */}
       {showUpsert && (

@@ -10,7 +10,7 @@ import { FiChevronDown, FiCheck } from "react-icons/fi";
  * @param {Array} options - Array of { value, label }
  * @param {string} placeholder - Display text when no value selected
  */
-export default function Select({ value, onChange, options = [], placeholder = "Chọn..." }) {
+export default function Select({ value, onChange, options = [], placeholder = "Chọn...", className = "", style = {} }) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -35,7 +35,7 @@ export default function Select({ value, onChange, options = [], placeholder = "C
   };
 
   return (
-    <div className="selectWrap" ref={containerRef}>
+    <div className={`selectWrap ${className}`} ref={containerRef} style={style}>
       {/* Trigger */}
       <div 
         className={`select ${isOpen ? 'is-open' : ''}`} 
