@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import { FiCheckCircle } from "react-icons/fi";
 import Modal from "../../../../dashboard/admin/components/ui/Modal";
+import Calendar from "../../../../dashboard/admin/components/ui/Calendar/Calendar";
 
 const ModalYearForm = ({ modal, onClose, academicYears, upsertYear }) => {
   const id = modal.payload?.id;
@@ -26,13 +27,11 @@ const ModalYearForm = ({ modal, onClose, academicYears, upsertYear }) => {
         </div>
 
         <div className="formRow">
-          <label>Start date *</label>
-          <input className="input" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+          <Calendar label="Start date *" value={startDate} onChange={setStartDate} placeholder="Chọn ngày bắt đầu" />
         </div>
 
         <div className="formRow">
-          <label>End date *</label>
-          <input className="input" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+          <Calendar label="End date *" value={endDate} onChange={setEndDate} placeholder="Chọn ngày kết thúc" />
         </div>
 
         {!canSave && (name || startDate || endDate) ? (

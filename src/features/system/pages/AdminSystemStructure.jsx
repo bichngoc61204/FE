@@ -284,11 +284,14 @@ const AdminSystemStructure = () => {
       {/* HEADER */}
       <div className="sys-header">
         <div className="sys-header__left">
-          <div className="sys-title">
-            <FiSettings /> Cấu trúc hệ thống
-          </div>
-          <div className="sys-sub">
-            Quản lý danh mục nền tảng (cấp/khối/năm/môn/vai trò) và cấu hình quy tắc điểm danh (system_config).
+          <div className="sys-header-main">
+            <FiSettings />
+            <div>
+              <div className="sys-title">Cấu trúc hệ thống</div>
+              <div className="sys-sub">
+                Quản lý danh mục nền tảng (cấp/khối/năm/môn/vai trò) và cấu hình quy tắc điểm danh (system_config).
+              </div>
+            </div>
           </div>
           <div className="sys-badges">
             <span className="pill pill--ok">
@@ -346,13 +349,16 @@ const AdminSystemStructure = () => {
               }
             >
               <div className="toolbarRow">
-                <SearchInput
-                  value={qLevels}
-                  onChange={setQLevels}
-                  placeholder="Tìm theo tên/mô tả cấp học…"
-                  label={null}
-                  style={{ flex: 1, minWidth: 220 }}
-                />
+                <div className="searchMini" style={{ flex: 1 }}>
+                  <FiSearch className="mutedIc" />
+                  <SearchInput
+                    value={qLevels}
+                    onChange={setQLevels}
+                    placeholder="Tìm theo tên/mô tả cấp học…"
+                    label={null}
+                    style={{ flex: 1, minWidth: 220 }}
+                  />
+                </div>
               </div>
 
               <EntityTable
@@ -410,20 +416,19 @@ const AdminSystemStructure = () => {
               }
             >
               <div className="toolbarRow">
-                <div className="filter">
-                  <FiLayers className="mutedIc" />
-                  <Select value={levelFilter} onChange={setLevelFilter} options={gradeLevelOptions} />
-                </div>
-                <div style={{ flex: 1 }} />
-                <div className="searchMini">
+                <div className="searchMini" style={{ flex: 1 }}>
                   <FiSearch className="mutedIc" />
                   <SearchInput
                     value={qGrades}
                     onChange={setQGrades}
                     placeholder="Tìm theo khối hoặc cấp…"
                     label={null}
-                    style={{ minWidth: 260 }}
+                    style={{ width: "100%", minWidth: 260 }}
                   />
+                </div>
+                <div className="filter">
+                  <FiLayers className="mutedIc" />
+                  <Select value={levelFilter} onChange={setLevelFilter} options={gradeLevelOptions} />
                 </div>
               </div>
 
@@ -474,13 +479,16 @@ const AdminSystemStructure = () => {
               }
             >
               <div className="toolbarRow">
-                <SearchInput
-                  value={qYears}
-                  onChange={setQYears}
-                  placeholder="Tìm theo tên năm học… (VD: 2025-2026)"
-                  label={null}
-                  style={{ flex: 1, minWidth: 260 }}
-                />
+                <div className="searchMini" style={{ flex: 1 }}>
+                  <FiSearch className="mutedIc" />
+                  <SearchInput
+                    value={qYears}
+                    onChange={setQYears}
+                    placeholder="Tìm theo tên năm học… (VD: 2025-2026)"
+                    label={null}
+                    style={{ flex: 1, minWidth: 260 }}
+                  />
+                </div>
               </div>
 
               <EntityTable
@@ -542,7 +550,8 @@ const AdminSystemStructure = () => {
               }
             >
               <div className="toolbarRow">
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1 }} className="searchMini">
+                  <FiSearch className="mutedIc" />
                   <SearchInput
                     value={qSubjects}
                     onChange={setQSubjects}
@@ -611,7 +620,8 @@ const AdminSystemStructure = () => {
               }
             >
               <div className="toolbarRow">
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1 }} className="searchMini">
+                  <FiSearch className="mutedIc" />
                   <SearchInput
                     value={qRoles}
                     onChange={setQRoles}
@@ -716,12 +726,8 @@ const AdminSystemStructure = () => {
           {activeTab === "audit" ? (
             <Card icon={<FiFileText />} title="Audit log (audit_logs)" subtitle="Truy vết thay đổi hệ thống">
               <div className="toolbarRow">
-                <div className="filter">
-                  <FiShield className="mutedIc" />
-                  <Select value={entityFilter} onChange={setEntityFilter} options={ENTITY_OPTIONS} />
-                </div>
-                <div style={{ flex: 1 }} />
-                <div style={{ minWidth: 320 }}>
+                <div style={{ flex: 1, minWidth: 320 }} className="searchMini">
+                  <FiSearch className="mutedIc" />
                   <SearchInput
                     value={qAudit}
                     onChange={setQAudit}
@@ -729,6 +735,10 @@ const AdminSystemStructure = () => {
                     label={null}
                     style={{ width: "100%" }}
                   />
+                </div>
+                <div className="filter">
+                  <FiShield className="mutedIc" />
+                  <Select value={entityFilter} onChange={setEntityFilter} options={ENTITY_OPTIONS} />
                 </div>
               </div>
 

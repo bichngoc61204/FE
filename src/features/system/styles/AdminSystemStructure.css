@@ -1,9 +1,11 @@
 
 .sys-page { display:flex; flex-direction:column; gap: 18px; }
 .sys-header { display:flex; justify-content:space-between; gap: 14px; flex-wrap:wrap; align-items:flex-start; }
-.sys-header__left { display:flex; flex-direction:column; gap: 8px; min-width: 320px; flex: 1; }
-.sys-title { display:flex; align-items:center; gap: 10px; font-weight: 700; color: var(--tc); font-size: 1.1rem; }
-.sys-sub { color: var(--ts); font-weight: 650; font-size: 12px; line-height: 1.5; }
+.sys-header__left { display:flex; flex-direction:column; gap: 10px; min-width: 320px; flex: 1; }
+.sys-header-main { display: flex; gap: 12px; align-items: flex-start; }
+.sys-header-main svg { font-size: 20px; color: var(--mc); margin-top: 4px; }
+.sys-title { font-weight: 700; color: var(--tc); font-size: 18px; line-height: 1.2; }
+.sys-sub { color: var(--ts); font-weight: 650; font-size: 13px; line-height: 1.5; margin-top: 4px; }
 .sys-badges { display:flex; gap: 10px; flex-wrap:wrap; }
 .sys-header__right { display:flex; gap: 10px; align-items:center; flex-wrap:wrap; }
 
@@ -19,7 +21,7 @@
 .sys-tab.active .sys-tab__ic { background: rgba(255,255,255,.2); color: var(--tw); }
 
 .toolbarRow { display:flex; gap: 12px; align-items:center; flex-wrap:wrap; margin-bottom: 12px; }
-.filter { display:flex; align-items:center; gap: 8px; }
+.filter { display:flex; align-items:center; gap: 8px; flex-direction: row !important; }
 .mutedIc { color: var(--ts); }
 .searchMini { display:flex; align-items:center; gap: 8px; }
 

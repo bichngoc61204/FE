@@ -26,7 +26,7 @@ const AdminSidebar = () => {
         { key: 'teacher', path: '/admin/teachers', label: t('teacher'), icon: <FiUsers /> },
         { key: 'classes', path: '/admin/classes', label: t('classes'), icon: <FiBook /> },
         { key: 'students', path: '/admin/students', label: t('students'), icon: <FiUser /> },
-        { key: 'timetable', path: '/admin/timetable', label: t('timetable'), icon: <FiCalendar /> },
+        { key: 'timetable', path: '/admin/timetables', label: t('timetable'), icon: <FiCalendar /> },
         { key: 'attendance', path: '/admin/attendance', label: t('attendance'), icon: <FiCheckCircle /> },
         { key: 'systemConfig', path: '/admin/systemConfig', label: t('systemConfig'), icon: <FiSettings /> },
     ]
