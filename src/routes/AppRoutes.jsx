@@ -17,6 +17,10 @@ import AdminTimetables from "../features/Timetables/pages/AdminTimetables";
 import AdminAttendance from "../features/attendance/pages/AdminAttendance";
 import ParentLayout from "../features/dashboard/parent/layouts/ParentLayout";
 import ParentDashboard from "../features/dashboard/parent/pages/ParentDashboard";
+import ParentSchedule from "../features/dashboard/parent/pages/ParentSchedule";
+import Attendance from "../features/dashboard/parent/pages/Attendance.jsx";
+
+
 
 const AppRoutes = () => {
     return (
@@ -122,6 +126,8 @@ const AppRoutes = () => {
             <Route path="/parent" element={<ParentLayout />}>
                 <Route index element={<ParentDashboard />} />
                 <Route path="notifications" element={<div className="p-4"><h2>Thông báo</h2><p>Coming soon...</p></div>} />
+                <Route path="schedule" element={<ParentSchedule />} />
+                <Route path="attendance" element={<Attendance />} />
             </Route>
         </Routes>
     );

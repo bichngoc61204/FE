@@ -20,7 +20,7 @@ const ParentSidebar = () => {
     // or fallbacking to keys that likely exist.
     const menu = [
         { key: 'dashboard', path: '/parent', label: t('dashboard'), icon: <FiHome />, end: true },
-        { key: 'timetable', path: '/parent/timetable', label: t('timetable'), icon: <FiCalendar /> },
+        { key: 'timetable', path: '/parent/schedule', label: t('timetable'), icon: <FiCalendar /> },
         { key: 'attendance', path: '/parent/attendance', label: t('attendance'), icon: <FiCheckCircle /> },
         { key: 'leave', path: '/parent/leave', label: t('leaveRequests'), icon: <FiFileText /> },
         { key: 'student', path: '/parent/student', label: t('studentProfile'), icon: <FiUser /> },

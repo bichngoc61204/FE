@@ -1,0 +1,134 @@
+.attendance-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.attendance-table thead {
+  background: #f9fafb;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #9ca3af;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 16px 24px;
+}
+
+.attendance-table tbody tr {
+  border-top: 1px solid #f3f4f6;
+  transition: background 0.2s ease;
+}
+
+.attendance-table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+/* DATE */
+.date-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-cell .day {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.date-cell .date {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+/* STATUS */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status.present {
+  background: #ecfdf5;
+  color: #16a34a;
+  border: 1px solid #dcfce7;
+}
+
+.status.absent {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+.status.late {
+  background: #fffbeb;
+  color: #ca8a04;
+  border: 1px solid #fef3c7;
+}
+
+.status.other {
+  background: #f9fafb;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background: #22c55e;
+}
+
+.dot.yellow {
+  background: #facc15;
+}
+
+.dot.red {
+  background: #ef4444;
+}
+
+/* TIME & NOTE */
+.time {
+  font-weight: 600;
+  color: #4b5563;
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  font-style: italic;
+  color: #6b7280;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* EMPTY */
+.empty {
+  padding: 48px;
+  text-align: center;
+  font-style: italic;
+  color: #9ca3af;
+}
