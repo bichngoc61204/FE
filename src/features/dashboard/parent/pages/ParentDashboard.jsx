@@ -94,11 +94,13 @@ const ParntDashboard = () => {
           </div>
 
           <div className="attendance-item disabled">
+            <div className="attendance-left">
             <FaChartLine />
             <div>
               <strong>Check-out dự kiến</strong>
               <span>Chiều nay - 16:30</span>
             </div>
+          </div>
           </div>
         </div>
 
@@ -130,7 +132,7 @@ const ParntDashboard = () => {
       {/* Rewards */}
       <div className="card rewards">
         <h3>
-          <FaAward className="icon warning" />
+          <FaAward fill="var(--mc)" />
           Thành tích nổi bật
         </h3>
 

@@ -19,6 +19,7 @@ const Attendance = () => {
       date: '2024-05-06',
       status: 'PRESENT',
       checkInTime: '07:05',
+      checkOutTime: '16:30',
       note: ''
     },
     {
@@ -26,6 +27,7 @@ const Attendance = () => {
       date: '2024-05-07',
       status: 'LATE',
       checkInTime: '07:20',
+      checkOutTime: '16:45',
       note: 'Kẹt xe'
     },
     {
@@ -33,6 +35,7 @@ const Attendance = () => {
       date: '2024-05-08',
       status: 'ABSENT',
       checkInTime: null,
+      checkOutTime: null,
       note: 'Nghỉ ốm'
     },
     {
@@ -40,6 +43,7 @@ const Attendance = () => {
       date: '2024-05-09',
       status: 'PRESENT',
       checkInTime: '07:00',
+      checkOutTime: '16:30',
       note: ''
     },
     {
@@ -47,6 +51,7 @@ const Attendance = () => {
       date: '2024-05-10',
       status: 'PRESENT',
       checkInTime: '07:03',
+      checkOutTime: '16:35',
       note: ''
     }
   ], []);
@@ -93,13 +98,11 @@ const Attendance = () => {
               alt="Profile"
               className="student-avatar"
             />
-            <div className="online-dot"></div>
           </div>
 
           <div className="student-text">
             <h2 className="student-name">{MOCK_STUDENT.name}</h2>
-            <p className="student-class">{MOCK_STUDENT.class}</p>
-            <p className="student-id">Mã số: {MOCK_STUDENT.studentId}</p>
+            <p>{MOCK_STUDENT.class} • Mã HS: {MOCK_STUDENT.studentId}</p>
           </div>
         </div>
 

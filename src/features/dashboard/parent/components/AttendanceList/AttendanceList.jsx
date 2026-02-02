@@ -42,8 +42,9 @@ const AttendanceList = ({ records }) => {
           <thead>
             <tr>
               <th>Ngày điểm danh</th>
+              <th>Thời gian vào</th>
+              <th>Thời gian ra</th>
               <th>Trạng thái</th>
-              <th>Thời gian</th>
               <th>Ghi chú</th>
             </tr>
           </thead>
@@ -65,6 +66,14 @@ const AttendanceList = ({ records }) => {
                     </div>
                   </td>
 
+                  <td className="time">
+                    {record.checkInTime || '--:--'}
+                  </td>
+
+                  <td className="time">
+                    {record.checkOutTime || '--:--'}
+                  </td>
+
                   <td>
                     <span className={getStatusClass(record.status)}>
                       <span
@@ -80,10 +89,6 @@ const AttendanceList = ({ records }) => {
                     </span>
                   </td>
 
-                  <td className="time">
-                    {record.checkInTime || '--:--'}
-                  </td>
-
                   <td className="note">
                     {record.note || '-'}
                   </td>
@@ -91,7 +96,7 @@ const AttendanceList = ({ records }) => {
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="empty">
+                <td colSpan="5" className="empty">
                   Không có dữ liệu điểm danh trong giai đoạn này.
                 </td>
               </tr>

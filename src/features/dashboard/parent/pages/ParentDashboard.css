@@ -10,13 +10,12 @@
 /* ===== HEADER ===== */
 
 .profile-header {
-  position: relative;
-  background: linear-gradient(135deg, var(--mc) 0%, var(--mc-trans) 100%);
+  background: #ffffff;
   border-radius: 24px;
-  padding: 32px;
-  color: #111827;
-  overflow: hidden;
-  transition: width 0.5s ease;
+  padding: 24px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
 }
 
 .profile-bg {
@@ -45,12 +44,12 @@
 
 .profile-info h2 {
   font-size: 24px;
+  margin: 0;
 }
 
 .profile-info p {
   opacity: 0.9;
 }
-
 .tags {
   margin-top: 12px;
   display: flex;
@@ -72,9 +71,14 @@
 .attendance-rate {
   margin-left: auto;
   background: rgba(255,255,255,0.15);
-  padding: 16px;
   border-radius: 16px;
   text-align: center;
+}
+
+.attendance-rate strong {
+   font-size: 30px;
+  font-weight: 900;
+  color: #4f46e5;
 }
 
 /* ===== GRID ===== */
@@ -129,6 +133,11 @@
   align-items: center;
 }
 
+.attendance-left div {
+  display: flex;
+  flex-direction: column;
+}
+
 .point {
   font-weight: bold;
 }
@@ -179,6 +188,9 @@
   text-align: center;
   cursor: pointer;
   transition: transform .2s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .badge:hover {
@@ -186,8 +198,10 @@
 }
 
 .badge svg {
-  color: #f59e0b;
+  color: var(--mc);
   margin-bottom: 8px;
+  width: 40px;
+  height: 40px;
 }
 
 .badge span {
